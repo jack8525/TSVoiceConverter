@@ -108,6 +108,22 @@ extern "C" {
 }
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+    NSData* DecodeAMRToWAVE(NSData* data);
+#ifdef __cplusplus
+}
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    NSData* EncodeWAVEToAMR(NSData* data, int nChannels, int nBitsPerSample);
+#ifdef __cplusplus
+}
+#endif
+
 
 
 
