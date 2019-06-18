@@ -52,8 +52,8 @@ NSData * fuckAndroid3GP(NSData *data) {
 
     if (data.length < 50) {
         NSLog(@"not android 3gp");
-        //return data;
-        return nil;
+        return data;
+//        return nil;
     }
 
     char *bis = (char *)[data bytes];
@@ -66,8 +66,8 @@ NSData * fuckAndroid3GP(NSData *data) {
     bis += 4;
     if (type != 0x66747970) {
         NSLog(@"not android 3gp");
-        //return data;
-        return nil;
+        return data;
+//        return nil;
     }
 
     readUint32(bis);
