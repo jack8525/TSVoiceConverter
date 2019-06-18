@@ -460,7 +460,7 @@ NSData* DecodeAMRToWAVE(NSData* data) {
     rfile = (const char *)[data bytes];
     // 检查amr文件头
     if (strncmp(rfile, AMR_MAGIC_NUMBER, strlen(AMR_MAGIC_NUMBER))) {
-        return nil;
+        return data;
     }
 
     pos += strlen(AMR_MAGIC_NUMBER);
